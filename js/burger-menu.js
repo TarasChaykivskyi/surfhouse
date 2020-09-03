@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    let buttonOpen = document.getElementById('burger-menu'),
+    var buttonOpen = document.getElementById('burger-menu'),
         buttonClose = document.getElementById('close-burger-menu'),
         containerMenu = document.getElementsByClassName('aside')[0],
         body = document.getElementsByTagName('body')[0],

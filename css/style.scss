@@ -81,7 +81,11 @@ button {
     .header {
 
       .header-top {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         position: relative;
         z-index: 2;
@@ -95,13 +99,19 @@ button {
           position: absolute;
           top: 30px;
           left: 120px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
           height: 30px;
           width: 35px;
           cursor: pointer;
 
           span {
+            display: block;
             width: 100%;
             height: 4px;
             background: #000;
@@ -174,6 +184,7 @@ button {
       position: absolute;
       width: 100%;
       bottom: 69px;
+      left: 0;
       text-align: center;
       height: 0;
       line-height: 0;
@@ -220,8 +231,14 @@ button {
       width: 100%;
       height: 100%;
       position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
 
       .slider-content {
@@ -236,7 +253,7 @@ button {
           line-height: 35px;
           font-family: "Raleway - Extra Bold";
           text-transform: uppercase;
-          margin-bottom: 2px;
+          margin-bottom: 8px;
           margin-top: 65px;
         }
 
@@ -263,8 +280,11 @@ button {
   }
 
   .wrapper-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: -18px;
+    margin-bottom: 30px;
 
     .aside {
       width: 270px;
@@ -277,7 +297,21 @@ button {
         background: #000;
         font-family: Roboto;
 
+        &:after {
+          content:  "";
+          display: block;
+          clear: both;
+        }
+
+        span {
+          display: block;
+          float: left;
+          line-height: 25px;
+        }
+
         button {
+          display: block;
+          float: right;
           font-size: 30px;
           line-height: 25px;
           color: #ffffff;
@@ -294,8 +328,14 @@ button {
         z-index: 2;
 
         > div {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
 
@@ -305,6 +345,7 @@ button {
           padding: 0 33px;
 
           a {
+            display: block;
             line-height: 27px;
             color: #fb4d01;
             font-family: Raleway;
@@ -325,7 +366,11 @@ button {
             cursor: pointer;
 
             &.basket {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
               align-items: center;
               padding-left: 26px;
 
@@ -377,6 +422,7 @@ button {
         .second-container {
 
           a {
+            display: block;
             line-height: 27px;
             color: #ffffff;
             font-family: Raleway;
@@ -428,8 +474,17 @@ button {
             width: 34px;
             height: 100%;
             background-color: #333333;
+            background-image: url("../images/icons/Search-Icon.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
           }
         }
@@ -604,7 +659,7 @@ button {
     }
 
     .main-content {
-      width: calc(97.4% - 270px);
+      width: 74.4%;
       margin-left: 2.6%;
       background-color: #f8f8f8;
       padding-top: 27px;
@@ -658,11 +713,11 @@ button {
         }
 
         &.new-products {
-          
+
           .block-products {
-            
+
             .product {
-              
+
               .product-description {
 
                 .product-title {
@@ -672,10 +727,14 @@ button {
             }
           }
         }
-        
+
         .top-block-new-products {
           margin-bottom: 27px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
 
           h3 {
@@ -701,16 +760,22 @@ button {
         }
 
         .block-products {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
+          display: block;
+
+          &:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
 
           .product {
+            display: block;
+            float: left;
             width: 31%;
             padding: 10px 10px 0;
             background-color: #ffffff;
             position: relative;
-            margin-bottom: 30px;
+            margin: 0 1% 30px;
 
             .product-image {
               display: block;
@@ -721,21 +786,24 @@ button {
             }
 
             .product-description {
-              display: flex;
-              justify-content: space-between;
-              height: 58px;
+              display: block;
+              height: 60px;
 
               .product-title {
+                display: block;
                 color: #333333;
                 font-family: "Roboto - Black Italic";
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 18px;
                 text-transform: uppercase;
+                float: left;
+                max-width: 60%;
               }
 
               .container-price {
-                text-align: right;
+                display: block;
+                float: right;
                 margin-left: 10px;
 
                 .product-price {
@@ -744,6 +812,7 @@ button {
                   font-family: "Roboto - Black Italic";
                   font-size: 18px;
                   font-weight: 400;
+                  text-align: right;
 
                   &-old {
                     display: block;
@@ -752,6 +821,7 @@ button {
                     font-size: 14px;
                     font-weight: 400;
                     text-decoration: line-through;
+                    text-align: right;
                   }
                 }
               }
@@ -765,9 +835,16 @@ button {
   .brand-container {
     height: 162px;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     background: #fff;
 
@@ -775,7 +852,7 @@ button {
       color: #bababa;
       font-size: 35px;
       font-family: "Roboto - Black";
-      margin: 7px 14.9px 0;
+      margin: 7px 12px 0;
     }
   }
 
@@ -810,12 +887,17 @@ button {
     }
 
     .block-instagram-photos {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       margin-bottom: 54px;
 
       a {
-        width: 16%;
+        display: block;
+        width: 16.7%;
 
         img {
           width: 100%;
@@ -824,13 +906,21 @@ button {
     }
 
     .blocks-socials {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       height: 150px;
 
       .block-social {
         width: 33.3%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         &.facebook {
@@ -854,10 +944,18 @@ button {
     color: #ffffff;
 
     .footer-top {
-      display: flex;
+      display: block;
       padding: 71px 16px 48px;
 
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
       > div {
+        display: block;
+        float: left;
         width: 15%;
         margin: 0 1%;
 
@@ -925,8 +1023,13 @@ button {
           }
 
           .container-payment-icon {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
             margin-left: -22px;
 
@@ -948,6 +1051,8 @@ button {
           .footer-phone {
             color: #ffffff;
             font-size: 14px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
 
             span {
@@ -1014,8 +1119,14 @@ button {
 
       .footer-bottom {
         height: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         .footer-bottom-left {
@@ -1079,7 +1190,7 @@ button {
           .block-products {
 
             .product {
-              width: 49%;
+              width: 48%;
 
               .product-image {
                 height: 275px;
@@ -1094,7 +1205,7 @@ button {
           &.new-products {
 
             .product {
-              width: 49%;
+              width: 48%;
 
               &:nth-child(5) {
                 display: none;
@@ -1185,6 +1296,7 @@ button {
     .brand-container {
       height: auto;
       padding: 20px 0;
+      text-align: center;
 
       .brand {
         font-size: 20px;
@@ -1204,21 +1316,25 @@ button {
       .footer-inner {
 
         .footer-top {
-          flex-wrap: wrap;
-          justify-content: center;
           padding: 50px 16px 0;
 
           > div {
-            width: 25%;
+            width: 31%;
+            text-align: center;
             margin: 0 1% 40px;
 
             &.newsletter-footer {
-              width: 40%;
+              width: 48%;
+              padding-left: 5%;
+
+              span {
+                width: 100%;
+              }
             }
 
             &.about-us-footer {
-              width: 43%;
-              padding-left: 25px;
+              width: 48%;
+              padding-left: 5%;
             }
           }
         }
@@ -1247,6 +1363,8 @@ button {
           }
 
           .burger-menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
           }
 
@@ -1268,6 +1386,8 @@ button {
       height: 450px;
 
       .top-slider-inner {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         text-align: center;
 
@@ -1289,6 +1409,7 @@ button {
             padding: 8px 16px;
             margin: 15px auto 0;
             font-size: 13px;
+            display: inline-block;
           }
         }
 
@@ -1312,26 +1433,31 @@ button {
         display: none;
         position: fixed;
         top: 0;
+        bottom: 0;
         left: 0;
         right: 0;
-        overflow: scroll;
+        overflow-y: scroll;
         background: #fff;
         z-index: 99;
         width: 100%;
         height: 100vh;
         margin-top: 0;
         text-align: center;
+        -webkit-transform: translate(-100%);
         transform: translate(-100%);
-        transition: transform 20s ease-in-out;
+        -webkit-transition: -webkit-transform 200s ease-in-out;
+        transition: -webkit-transform 200s ease-in-out;
 
         &.active {
           display: block;
+          -webkit-transform: translate(0);
           transform: translate(0);
-          transition: transform 20s ease-in-out;
+          -webkit-transition: -webkit-transform 20s ease-in-out;
+          transition: -webkit-transform 20s ease-in-out;
         }
 
         .m-top {
-          display: flex !important;
+          display: block !important;
         }
 
         .header-bottom {
@@ -1391,35 +1517,6 @@ button {
         }
       }
     }
-
-    .footer {
-
-      .footer-top {
-
-        span {
-          font-size: 10px;
-        }
-
-        > div {
-
-          &.newsletter-footer {
-
-            .newsletter-input-container {
-
-              input {
-                font-size: 10px;
-                padding: 0 58px 0 10px;
-              }
-
-              button {
-                width: 48px;
-                font-size: 10px;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -1467,7 +1564,6 @@ button {
 
             .product {
               width: 100%;
-              max-width: 360px;
               margin: 0 auto 25px;
 
               &:nth-child(2) {
@@ -1547,27 +1643,14 @@ button {
               padding-left: 11px;
             }
 
-            &.newsletter-footer {
-
-              span {
-                width: 100%;
-              }
-
-              .newsletter-input-container {
-                margin: 0 auto 20px;
-              }
-
-              .container-payment-icon {
-                margin: auto;
-              }
-            }
-
             &.about-us-footer {
               padding: 0;
               margin-bottom: 15px;
 
               .footer-email,
               .footer-phone {
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
                 justify-content: center;
               }
 
