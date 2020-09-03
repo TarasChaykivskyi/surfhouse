@@ -28,6 +28,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 ul {
@@ -209,7 +210,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-top: -18px;
-  margin-bottom: 30px; }
+  margin-bottom: -10px; }
   .wrapper .wrapper-content .aside {
     width: 270px;
     margin-top: -504px; }
@@ -645,7 +646,7 @@ button {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 54px; }
+    margin-bottom: 48px; }
     .wrapper .social-container .block-instagram-photos a {
       display: block;
       width: 16.7%; }
@@ -916,7 +917,7 @@ button {
           right: auto;
           left: 10px; }
   .wrapper .wrapper-content .aside {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -929,16 +930,16 @@ button {
     height: 100vh;
     margin-top: 0;
     text-align: center;
-    -webkit-transform: translate(-100%);
-    transform: translate(-100%);
-    -webkit-transition: -webkit-transform 200s ease-in-out;
-    transition: -webkit-transform 200s ease-in-out; }
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); }
     .wrapper .wrapper-content .aside.active {
-      display: block;
-      -webkit-transform: translate(0);
-      transform: translate(0);
-      -webkit-transition: -webkit-transform 20s ease-in-out;
-      transition: -webkit-transform 20s ease-in-out; }
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%); }
     .wrapper .wrapper-content .aside .m-top {
       display: block !important; }
     .wrapper .wrapper-content .aside .header-bottom {
